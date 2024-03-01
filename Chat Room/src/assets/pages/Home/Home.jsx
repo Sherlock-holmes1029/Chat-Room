@@ -4,6 +4,7 @@ import Chat from './components/Chat'
 import './Home.css'
 
 			 function Home() {
+				let i=9
 				return (
 					<div className="home">
 						<div className="container">

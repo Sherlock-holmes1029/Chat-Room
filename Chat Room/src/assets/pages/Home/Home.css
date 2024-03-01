@@ -112,7 +112,7 @@ flex: 2;
     justify-content: space-between;
     color: white;
     padding-left: 5px;
-    padding-right: 5px;
+    padding-right: 8px;
 }
 .chatIcons{
     display: flex;
@@ -125,17 +125,104 @@ flex: 2;
 
 .Messages{
     background-color: #00d652;
+    overflow: auto;
+    overflow-x: hidden;
+    scrollbar-color: #99f7bd #f1f1f1;    
+    scrollbar-arrow-color: #f1f1f1;
 }
+
+
 .chat{
     .Messages{
         padding: 10px;
         background-color: #72f3a4;
-        height: calc(100% - 140px);
+        height: calc(100% - 120px);
         
     }
     .input{
-        height: 50px;
+        height: 30px;
         background-color: white;
         padding: 10px;
+    }
+}
+.input{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img{
+        width: 20px;
+        padding-right: 3px;
+        color: gray;
+        cursor: pointer;
+    }
+    label img{
+        padding-top: 3px;
+        padding-right: 7px;
+        width: 20px;
+        
+    }
+   
+    .send{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        button{
+            border: none;
+            padding: 10px 15px;
+            color: white;
+            cursor: pointer;
+        }
+    }
+    input{
+        border-style: none;
+        width: 100% ;
+        height: 100%;
+    }
+    input:active{
+        border-style: none;
+    }
+}
+
+.message{
+    display: flex;
+    gap: 20px;
+    margin-bottom:  15px;
+    .messageInfo{
+        img{
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        display: flex;
+        flex-direction: column;
+        color: gray;
+    }
+    .messageConent{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p{
+            background-color: white;
+            padding: 10px 20px;
+            border-radius: 0px 10px 10px 10px;
+            max-width: max-content;
+        }
+        img{
+            height: 50%;
+            width: 50% ;
+            object-fit: contain;
+        }
+    }
+    &.owner{
+        flex-direction: row-reverse;
+        .messageConent{
+            align-items: flex-end;
+          p{
+            background-color: #c9f0d8;
+            border-radius: 10px 0px 10px 10px;
+         }
+        }
     }
 }
