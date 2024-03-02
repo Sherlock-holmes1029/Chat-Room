@@ -128,7 +128,6 @@ flex: 2;
     overflow: auto;
     overflow-x: hidden;
     scrollbar-color: #99f7bd #f1f1f1;    
-    scrollbar-arrow-color: #f1f1f1;
 }
 
 
@@ -186,7 +185,6 @@ flex: 2;
 .message{
     display: flex;
     gap: 20px;
-    margin-bottom:  15px;
     .messageInfo{
         img{
             height: 40px;
